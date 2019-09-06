@@ -197,9 +197,11 @@
   // submit
   $$.prototype.submitProc = function(e){
     var form = e.target;
-    var elms = form.querySelectorAll(this.options.input_selector+","+this.options.interlocking_selector);
+    var query = this.options.input_selector;
+    query += (this.options.interlocking_selector) ? ","+this.options.interlocking_selector : "";
+    var elms = form.querySelectorAll(query);
     for(var i=0; i<elms.length; i++){
-      elms[i].value = elms[i].value.replace(/,/g,"");
+      elms[i].value = elms[i].value.replace(/[, ]/g,"");
     }
   };
 
