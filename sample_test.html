@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3-digit-separator</title>
+  <script src="3digit_separator.js"></script>
+  <style>
+    input[name="digi5"]{
+      background-color:red;
+    }
+    input[name="digi5"]:after{
+      content:"aaa";
+    }
+  </style>
+</head>
+<body>
+<form>
+  <div><input type="text" data-type="3digit_separator" name="digi1" value=""></div>
+  <div><input type="text" data-type="3digit_separator" name="digi2" value="1000"></div>
+  <div><input type="text" name="digi3" value="1000000"></div>
+  <div><input type="text" name="digi4" value="10000000"></div>
+  <div><input type="text" name="digi5" value="100000000"></div>
+</form>
+
+<script>
+  new $$3digit_separator({
+    input_selector        : "input[data-type='3digit_separator']",
+    hook_selector         : [{selector:"input[name='digi1']" , event_key:"blur"}],
+    interlocking_selector : "input[name='digi3'],input[name='digi4']"
+  });
+</script>
+</body>
+</html>
