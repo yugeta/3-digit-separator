@@ -39,6 +39,8 @@
     this.forms = [];
     var inputs = document.querySelectorAll(this.options.input_selector);
     for(var i=0; i<inputs.length; i++){
+      if(inputs[i].getAttribute("data-flg-3digitSeparator-blur") === "1"){continue;}
+      inputs[i].setAttribute("data-flg-3digitSeparator-blur","1");
       this.setDigitSeparator(inputs[i]);
       // __event(inputs[i] , "focus" , (function(e){this.eventFocus(e.currentTarget)}).bind(this));
       // __event(inputs[i] , "keyup" , (function(e){this.setDigitSeparator_keyup(e.currentTarget,e.keyCode)}).bind(this));
@@ -52,6 +54,8 @@
         || !this.options.hook_selector[i].event_key){continue;}
         var hooks = document.querySelectorAll(this.options.hook_selector[i].selector);
         for(var j=0; j<hooks.length; j++){
+          if(inputs[i].getAttribute("data-flg-3digitSeparator-hook") === "1"){continue;}
+          inputs[i].setAttribute("data-flg-3digitSeparator-hook","1");
           __event(hooks[j] , this.options.hook_selector[i].event_key , (function(e){this.setInterlocking(e)}).bind(this));
           if(hooks[j].form){this.forms.push(hooks[j].form)}
         }

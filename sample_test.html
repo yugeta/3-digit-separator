@@ -25,7 +25,12 @@
 <script>
   new $$3digit_separator({
     input_selector        : "input[data-type='3digit_separator']",
-    hook_selector         : [{selector:"input[name='digi1']" , event_key:"blur"}],
+    hook_selector         : [
+      {
+        selector:"input[name='digi1']",
+        event_key:"blur"
+      }
+    ],
     interlocking_selector : "input[name='digi3'],input[name='digi4']"
   });
 </script>
