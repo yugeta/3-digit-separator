@@ -52,10 +52,12 @@
       for(var i=0; i<this.options.hook_selector.length; i++){
         if(!this.options.hook_selector[i].selector
         || !this.options.hook_selector[i].event_key){continue;}
+        
         var hooks = document.querySelectorAll(this.options.hook_selector[i].selector);
         for(var j=0; j<hooks.length; j++){
-          if(inputs[i].getAttribute("data-flg-3digitSeparator-hook") === "1"){continue;}
-          inputs[i].setAttribute("data-flg-3digitSeparator-hook","1");
+          if(hooks[j].getAttribute("data-flg-3digitSeparator-hook") === "1"){continue;}
+          hooks[j].setAttribute("data-flg-3digitSeparator-hook","1");
+
           __event(hooks[j] , this.options.hook_selector[i].event_key , (function(e){this.setInterlocking(e)}).bind(this));
           if(hooks[j].form){this.forms.push(hooks[j].form)}
         }
