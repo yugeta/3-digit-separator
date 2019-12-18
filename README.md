@@ -1,12 +1,16 @@
 3-Digit-Separator
 ==
+
+![title-banner](docs/banner.png)
+
+```
 Author : Yugeta.Koji
 Date   : 2019.09.06
 URL    : http://myntinc.com
 Organization : MYNT.Inc,
 var 1.0 : 
 ver 1.1 : 設定済みフラグを設置して重複イベントを発生させない。
-
+```
 
 # Specification
   - 入力された数値に3桁毎にカンマを加える
