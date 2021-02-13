@@ -8,7 +8,7 @@ Author : Yugeta.Koji
 Date   : 2019.09.06
 URL    : http://myntinc.com
 Organization : MYNT.Inc,
-var 1.0 : 
+ver 1.0 :
 ver 1.1 : 設定済みフラグを設置して重複イベントを発生させない。
 ```
 
@@ -23,10 +23,9 @@ ver 1.1 : 設定済みフラグを設置して重複イベントを発生させ�
 # Causion
   - 数値以外の文字列を入れると自動削除
   - "-"（マイナス）は、先頭文字列についていないと不要文字列として削除される。
- 
+
 
 # Options
   - input_selector : 対象の入力フォーム取得（複数対応） ex) "form input[type='text'][data-type='3digit_separator']"
-  - hool_selector  : イベント起動の対象になるelement-selector（複数） ex) {button[name='btn']" : "event-key"},...
+  - hook_selector  : イベント起動の対象になるelement-selector（複数） ex) {button[name='btn']" : "event-key"},...
   - interlocking_selector : "form input[type='text'][data-type='3digit_separator']"
-
