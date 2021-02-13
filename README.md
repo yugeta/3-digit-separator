@@ -27,5 +27,5 @@ ver 1.1 : 設定済みフラグを設置して重複イベントを発生させ�
 
 # Options
   - input_selector : 対象の入力フォーム取得（複数対応） ex) "form input[type='text'][data-type='3digit_separator']"
-  - hook_selector  : イベント起動の対象になるelement-selector（複数） ex) {button[name='btn']" : "event-key"},...
+  - hook_selector  : イベント起動の対象になるelement-selector（複数） ex) [{selector: "button[name='btn']", event_key: "event-key"},...]
   - interlocking_selector : "form input[type='text'][data-type='3digit_separator']"
